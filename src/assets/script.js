@@ -1,10 +1,28 @@
 async function fetchPlayers() {
-    let fetcher = await fetch("../players.json");
-    let json = await fetcher.json();
-    // display_players(data);
-    console.log(json);
+  let dataFromJson = await fetch("../players.json");
+  let json = await dataFromJson.json();
+  let players = json.players;
+
+  displayData(players);
 }
 
-fetchPlayers(); 
-//function display_players(data){
-//}
+
+const playersContainer = document.getElementById('players-container');
+
+function displayData(players) {
+    players.forEach(player => {
+      const div = document.createElement('div');
+      div.classList.add('player-card');
+      div.innerHTML = `
+      <img src="
+      ${player.photo}"/>
+      <p>${player.name}</p>
+      
+      `;
+      playersContainer.appendChild(div);
+    });
+}
+
+fetchPlayers();
+
+
