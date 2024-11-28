@@ -14,6 +14,67 @@
   </head>
   <body>
     <div class="larger-container d-flex flex-row justify-content-evenly mt-3">
+      <div class="players-container" id="players-container"></div>
+
+
+
+      <div id="container-2">
+        <div id="player1">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player2">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player3">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player4">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player5">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player6">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player7">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player8">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player9">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player10">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+        <div id="player11">
+          <a href="#players-container">
+            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
+          </a>
+        </div>
+      </div>
       <div class="containerr">
         <h1>Création de l'équipe</h1>
 
@@ -23,13 +84,10 @@
           <option value="4-3-3">4-3-3</option>
         </select>
 
-        <div id="team">
-          <!--div to be filled with js-->
-        </div>
-
         <h2>Ajouter un joueur :</h2>
 
         <form id="playerForm">
+            <div class="scroll_inputs">
           <input type="text" id="name" placeholder="Nom du Joueur" required />
           <input
             type="text"
@@ -38,70 +96,66 @@
             required
           />
           <input
-            type="number"
-            id="rating"
-            placeholder="Rating(1-100)"
-            min="1"
-            max="100"
+            type="text"
+            id="nationalité"
+            placeholder="Nationalité"
             required
           />
+
+          <input
+            type="text"
+            id="club"
+            placeholder="Club"
+            required
+          />
+
+          <input
+            type="number"
+            id="pace"
+            placeholder="pace"
+            required
+          />
+
+          <input
+            type="number"
+            id="shooting"
+            placeholder="shooting"
+            required
+          />
+          <input
+            type="number"
+            id="passing"
+            placeholder="passing"
+            required
+          />
+          <input
+            type="number"
+            id="dribbling"
+            placeholder="Dribbling"
+            required
+          />
+          <input
+            type="number"
+            id="defending"
+            placeholder="Defending"
+            required
+          />
+          <input
+            type="number"
+            id="physical"
+            placeholder="Physical"
+            required
+          />
+        </div>
           <button type="submit">Ajouter Joueur</button>
         </form>
 
         <h3>Joueurs Ajoutés :</h3>
 
-        <ul id="playerList">
-          <!-- ul to be filled-->
-        </ul>
-
         <h3>Chimie de l'équipe <span id="teamChemistry">0</span></h3>
       </div>
-      <img class="the-image" src="./../img/stadium_background.webp" alt="" />
-
-      <div id="container-2">
-        <div id="player1">
-          <a href="">
-            <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-            <img class="plus-img" src="../img/plus-removebg-preview.png" alt="">
-          </a>
-        </div>
-        <div id="player2">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player3">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player4">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player5">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player6">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player7">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player8">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player9">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player10">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-        <div id="player11">
-          <img class="playerCard" src="../img/badge_gold.webp" alt="" />
-        </div>
-      </div>
-
-      
     </div>
-    <div class="players-container" id="players-container">
-        
-    </div>
+
     <script src="../script.js"></script>
   </body>
 </html>
