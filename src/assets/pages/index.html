@@ -13,12 +13,26 @@
     <title>FutBin</title>
   </head>
   <body>
+    <!--Bar de navigation-->
+    <nav class="d-flex justify-content-between align-items-center">
+      <h4 class="fw-bold fs-4 d-none d-lg-block">FUTBIN</h4>
+      <ul class="d-flex gap-3 align-items-center d-none d-lg-flex">
+        <li><a class="text-decoration-none" href="home.html">HOME</a></li>
+        <li><a class="text-decoration-none" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!--Fin de bar de navigation-->
+
+    <!--Contenair de trois divisions-->
     <div class="larger-container d-flex flex-row justify-content-evenly mt-3">
-      <div class="players-container" id="players-container"></div>
-
-
-
+        <div> <!--List des joueurs générés depuis fichier json-->
+            <h1>List des joueurs</h1>
+            <div class="players-container" id="players-container"></div>
+        </div> <!--Fin List des joueurs générés depuis fichier json-->
+      
+      <!--Centenaire du terrain-->
       <div id="container-2">
+       
         <div id="player1">
           <a href="#players-container">
             <img class="playerCard" src="../img/badge_gold.webp" alt="" />
@@ -75,6 +89,8 @@
           </a>
         </div>
       </div>
+      <!--Fin du Centenaire du terrain-->
+      <!--Contenaire du formulaire pour ajouter jouer-->
       <div class="containerr">
         <h1>Création de l'équipe</h1>
 
@@ -87,74 +103,89 @@
         <h2>Ajouter un joueur :</h2>
 
         <form id="playerForm">
-            <div class="scroll_inputs">
-          <input type="text" id="name" placeholder="Nom du Joueur" required />
-          <input
-            type="text"
-            id="position"
-            placeholder="Position du joueur"
-            required
-          />
-          <input
-            type="text"
-            id="nationalité"
-            placeholder="Nationalité"
-            required
-          />
+          <div class="scroll_inputs">
+            <input type="text" id="name" placeholder="Nom du Joueur" required />
 
-          <input
-            type="text"
-            id="club"
-            placeholder="Club"
-            required
-          />
+            <input
+              type="url"
+              id="photo_joueur"
+              placeholder="Photo du joueur (url)"
+              required
+            />
+            <select id="position" name="position" required>
+              <option value="" disabled selected>Position du joueur</option>
+              <option value="RW">Right Wing (RW)</option>
+              <option value="LW">Left Wing (LW)</option>
+              <option value="ST">Striker (ST)</option>
+              <option value="CM-CENT">Central Midfield (CM)-CENTER</option>
+              <option value="CM-LEFT">Central Midfield (CM)-LEFT</option>
+              <option value="CM-RIGHT">Central Midfield (CM)-RIGHT</option>
+              <option value="CB-RIGHT">Center Back (CB)-RIGHT</option>
+              <option value="CB-LEFT">Center Back (CB)-LEFT</option>
+              <option value="RB">RIGHT Back (RB)-RIGHT</option>
+              <option value="LB">LEFT Back (RB)-LEFT</option>
+              <option value="GK">Goalkeeper (GK)</option>
+            </select>
 
-          <input
-            type="number"
-            id="pace"
-            placeholder="pace"
-            required
-          />
+            <input
+              type="text"
+              id="nationalité"
+              placeholder="Nationalité"
+              required
+            />
+            <input
+              type="url"
+              id="photo_flag"
+              placeholder="Photo du Flag (url)"
+              required
+            />
+            <input type="text" id="club" placeholder="Club" required />
 
-          <input
-            type="number"
-            id="shooting"
-            placeholder="shooting"
-            required
-          />
-          <input
-            type="number"
-            id="passing"
-            placeholder="passing"
-            required
-          />
-          <input
-            type="number"
-            id="dribbling"
-            placeholder="Dribbling"
-            required
-          />
-          <input
-            type="number"
-            id="defending"
-            placeholder="Defending"
-            required
-          />
-          <input
-            type="number"
-            id="physical"
-            placeholder="Physical"
-            required
-          />
-        </div>
-          <button type="submit">Ajouter Joueur</button>
+            <input type="number" id="pace" placeholder="pace" required />
+
+            <input
+              type="number"
+              id="shooting"
+              placeholder="shooting"
+              required
+            />
+            <input type="number" id="passing" placeholder="passing" required />
+            <input
+              type="number"
+              id="dribbling"
+              placeholder="Dribbling"
+              required
+            />
+            <input
+              type="number"
+              id="defending"
+              placeholder="Defending"
+              required
+            />
+            <input
+              type="number"
+              id="physical"
+              placeholder="Physical"
+              required
+            />
+          </div>
+          <button id="add_player_button" type="button">Ajouter Joueur</button>
         </form>
-
-        <h3>Joueurs Ajoutés :</h3>
 
         <h3>Chimie de l'équipe <span id="teamChemistry">0</span></h3>
       </div>
+      <!--Fin Contenaire du formulaire pour ajouter jouer-->
     </div>
+    <!--Fin du Contenaire de trois divisions-->
+    <!--contenaire de joueurs ajoutés-->
+
+    <div>
+        <hr>
+        <h1 id="joueurs_ajoutés">Joueurs Ajoutés :</h1>
+    <div id="added_players_container">
+
+    </div>
+</div>
 
     <script src="../script.js"></script>
   </body>
